@@ -1,0 +1,14 @@
+*/images/sprite/*
+*/images/sprite-stars/*
+*/.idea
+*/META-INF/*
+*/.sass-cache
+*/.coffeescript-cache
+*/compass_app_log.txt
+*/fire_app_log.txt
+*.rb
+*.iml
+*/Gruntfile.js
+*/package.json
+*/node_modules/*
+

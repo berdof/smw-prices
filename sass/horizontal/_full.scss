@@ -1,0 +1,150 @@
+@import "../base";
+
+& {
+  width: 125px;
+}
+
+.smwp__head {
+  padding: 0 9px;
+}
+
+.smwp__head__label {
+  span {
+    display: none;
+  }
+  em{
+    display: block;
+    font-style: normal;
+  }
+}
+
+.smwp__body {
+
+}
+
+.smwp__item {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 0 9px 0;
+}
+
+.smwp__item__info {
+  position: relative;
+  margin: 10px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.smwp__item__info__title {
+  vertical-align: middle;
+  display: block;
+  span {
+    display: inline-block;
+    color: #000;
+    font-size: 12px;
+  }
+}
+
+.smwp__item__info__img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  img {
+    display: inline-block;
+    height: 65px;
+  }
+}
+
+.smwp__item__prices {
+
+}
+
+.smwp__item__prices__item {
+  padding: 0 10px;
+  &:hover{
+    background-color: #f1f0f0;
+    .smwp__item__prices__cost,
+    .smwp__item__prices__bucket,
+    .smwp__item__prices__buy{
+      display: none;
+    }
+    .smwp__item__prices__name{
+      display: block;
+      width: 80px;
+      padding: 0;
+    }
+    .smwp__item__prices__rate{
+      display: block;
+      width: 25px;
+      i{
+        display: block;
+        width: auto;
+        float: none;
+        position: absolute;
+        left: 17px;
+        top: -2px;
+      }
+    }
+  }
+}
+
+.smwp__item__prices__name {
+  display: none;
+}
+
+.smwp__item__prices__rate {
+  @include sprite-background("star", $spritesStars, false);
+  background-repeat: no-repeat;
+  display: none;
+  span {
+    display: none;
+  }
+  i {
+    display: block;
+    @extend .smwp__item__prices__cost;
+    font-style: normal;
+  }
+}
+
+.smwp__item__prices__cost {
+  display: block;
+  float: left;
+  width: 57px;
+  font-size: 10px;
+}
+
+.smwp__item__prices__bucket {
+  display: block;
+  float: left;
+  position: relative;
+  top: 2px;
+}
+
+.smwp__item__prices__buy {
+  display: block;
+  float: left;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.smwp__footer {
+  padding: 7px 0 11px 0;
+  text-align: center;
+}
+
+.smwp__logo {
+  margin: 0 auto;
+  float: none;
+}
+
+.smwp__logo__img {
+  margin: 0 auto;
+}
+
+.smw__ya {
+  float: none;
+  padding-top: 7px;
+}

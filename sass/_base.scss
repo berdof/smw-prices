@@ -1,0 +1,224 @@
+& {
+  width: 300px;
+  //height: 532px;
+  border: 1px solid #cfcfcf;
+  @include border-radius(11px);
+  @include background-clip(padding-box);
+  background-color: #fff;
+}
+
+.smwp__head {
+  @extend .clearfix;
+  background-color: $headerColor;
+  padding: 0 10px 0 14px;
+  height: 27px;
+  line-height: 27px;
+  @include border-radius(11px 11px 0 0);
+}
+
+.smwp__head__label {
+  color: #fff;
+  font-size: 10px;
+  span {
+    display: block;
+  }
+  em{
+    display: none;
+  }
+}
+
+.smwp__towns {
+  position: relative;
+  padding: 0 13px 0 0;
+  line-height: 25px;
+  cursor: pointer;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 13px;
+    display: block;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+  }
+  ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    a {
+      color: $headerColor;
+    }
+  }
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  span, a {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+}
+
+.smwp__body {
+
+}
+
+.smwp__item {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0 0 9px 0;
+}
+
+.smwp__item__info {
+  display: table;
+  margin: 15px;
+
+}
+
+.smwp__item__info__title {
+  display: table-cell;
+  vertical-align: middle;
+  span {
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+.smwp__item__info__img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70px;
+  text-align: center;
+  img {
+    display: inline-block;
+    height: 68px;
+    max-width: 70px;
+  }
+}
+
+.smwp__item__prices {
+
+}
+
+.smwp__item__prices__item {
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  @include transition(all 0.3s);
+  padding: 0 14px;
+  @include box-sizing(border-box);
+
+  &:hover {
+    background-color: #f1f0f0;
+    .smwp__item__prices__name {
+      color: #2797d7;
+      @include transition(all 0.3s);
+    }
+  }
+}
+
+%smwp__item__prices__item {
+  line-height: 15px;
+  height: 15px;
+  float: left;
+}
+
+.smwp__item__prices__name {
+  @extend %smwp__item__prices__item;
+  color: #000;
+  font-size: 10px;
+  width: 104px;
+  @include box-sizing(border-box);
+  padding: 0 10px 0 0;
+  overflow: hidden;
+}
+
+.smwp__item__prices__rate {
+  @extend %smwp__item__prices__item;
+  @include sprite-background("star-empty", $spritesStars, false);
+  background-repeat: repeat-x;
+  position: relative;
+  height: 12px;
+  width: 65px;
+  position: relative;
+  top: 2px;
+  span {
+    @include sprite-background("star", $spritesStars, false);
+    background-repeat: repeat-x;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 12px;
+  }
+  i {
+    display: none;
+  }
+}
+
+.smwp__item__prices__cost {
+  @extend %smwp__item__prices__item;
+  display: block;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+  float: none;
+  overflow: hidden;
+}
+
+.smwp__item__prices__bucket {
+  @include sprite-background("bucket");
+  display: none;
+}
+
+.smwp__item__prices__buy {
+  display: none;
+  color: #fff;
+  font-size: 10px;
+  width: 35px;
+  height: 13px;
+  line-height: 13px;
+  @include background-clip(padding-box);
+  background-color: #0cf;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.smwp__footer {
+  overflow: hidden;
+  padding: 10px 15px;
+}
+
+.smwp__logo {
+  color: #c5c5c5;
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none !important;
+  float: left;
+  display: block;
+}
+
+.smwp__logo__img {
+  @include sprite-background(logo);
+  margin-bottom: 3px !important;
+}
+
+.smw__ya {
+  color: #c5c5c5;
+  font-size: 9px;
+  padding: 16px 0 0;
+  float: right;
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #c5c5c5 !important;
+  }
+}

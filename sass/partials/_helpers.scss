@@ -1,0 +1,70 @@
+
+
+* {
+  font-family: $fontNameLegacy !important;
+  outline: none ;
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-appearance: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  margin: 0;
+  padding: 0  ;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.center {
+  overflow: hidden !important;
+}
+
+.tac {
+  text-align: center !important;
+}
+
+.tal {
+  text-align: left !important;
+}
+
+.tar {
+  text-align: right !important;
+}
+
+.nav {
+  list-style: none;
+
+  @extend .clearfix;
+}
+
+.nav_hor {
+  @include horizontal-list;
+  @extend .nav;
+  overflow: visible;
+}
+
