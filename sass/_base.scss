@@ -85,9 +85,10 @@
 .smwp__item__info__title {
   display: table-cell;
   vertical-align: middle;
-  span {
+  a {
     display: inline-block;
     font-size: 16px;
+    color: #000;
   }
 }
 
@@ -96,6 +97,7 @@
   vertical-align: middle;
   width: 70px;
   text-align: center;
+
   img {
     display: inline-block;
     height: 68px;
