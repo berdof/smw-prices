@@ -1,0 +1,20 @@
+$sprites: sprite-map("sprite/*.png", $position: 0%, $spacing: 25px, $repeat: no-repeat, $readonly-spacing: 10px);
+$spritesStars: sprite-map("sprite-stars/*.png", $position: 0%, $spacing: 25px, $repeat: no-repeat, $readonly-spacing: 10px);
+
+@mixin sprite-background($name,$spriteMap:$sprites, $dimensions: true) {
+  background-image: sprite-url($spriteMap);
+  background-position: sprite-position($spriteMap, $name);
+  background-repeat: no-repeat;
+  @if $dimensions == true{
+    height: image-height(sprite-file($spriteMap, $name));
+    width: image-width(sprite-file($spriteMap, $name));
+    display: block;
+  }
+}
+@function sprite-width($name, $smap: $sprites) {
+  @return image-width(sprite-file($smap, $name));
+}
+
+@function sprite-height($name, $smap: $sprites) {
+  @return image-height(sprite-file($smap, $name));
+}
